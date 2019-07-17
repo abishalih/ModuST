@@ -61,6 +61,12 @@ const VerticalSidebar = ({ listMenu, animation, direction, visible, toggle }) =>
                         <Grid.Column> Ticket </Grid.Column>
                     </Grid>
             </Menu.Item>
+            <Menu.Item as={Link} to='/user' onClick={toggle}>
+            <Grid>
+                <Grid.Column> <Icon name='user' /> </Grid.Column>
+                <Grid.Column> User </Grid.Column>
+            </Grid>
+    </Menu.Item>
         }
     </Sidebar>
 )
