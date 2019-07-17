@@ -44,33 +44,18 @@ const VerticalSidebar = ({ listMenu, animation, direction, visible, toggle }) =>
             <Icon name='list layout'/>
             Menu
         </Menu.Item>
-        {
-            listMenu.lengh>0 ?
-            listMenu.map((menu, key)=>{
-            return (
-                <Menu.Item as={Link} to={menu.link} onClick={toggle} key={key}>
-                    <Grid>
-                        <Grid.Column> <Icon name={iconUI[menu.link]}/> </Grid.Column>
-                        <Grid.Column> {menu.name} </Grid.Column>
-                    </Grid>
-                </Menu.Item>
-            )}):
-            <div>
-            <Menu.Item as={Link} to='/ticket' onClick={toggle}>
-                    <Grid>
-                        <Grid.Column> <Icon name='ticket' /> </Grid.Column>
-                        <Grid.Column> Ticket </Grid.Column>
-                    </Grid>
-            </Menu.Item>
-            <Menu.Item as={Link} to='/user' onClick={toggle}>
-            <Grid>
-                <Grid.Column> <Icon name='user' /> </Grid.Column>
-                <Grid.Column> User </Grid.Column>
-            </Grid>
-            </Menu.Item>
-            </div>
-    </Menu.Item>
-        }
+        <Menu.Item as={Link} to='/ticket' onClick={toggle}>
+                <Grid>
+                    <Grid.Column> <Icon name='ticket' /> </Grid.Column>
+                    <Grid.Column> Ticket </Grid.Column>
+                </Grid>
+        </Menu.Item>
+        <Menu.Item as={Link} to='/user' onClick={toggle}>
+        <Grid>
+            <Grid.Column> <Icon name='user' /> </Grid.Column>
+            <Grid.Column> User </Grid.Column>
+        </Grid>
+        </Menu.Item>
     </Sidebar>
 )
 
