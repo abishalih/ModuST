@@ -10,7 +10,7 @@ class Content extends Component {
     render() {
         return (
             <div>
-                {this.props.isLogin ?<Profile/>:<Login/>}
+                {!this.props.isLogin ?<Profile/>:<Login/>}
             </div>
         );
     }
